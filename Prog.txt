@@ -1,0 +1,15 @@
+import RPi.GPIO as GPIO
+import time
+import urllib2
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(7,GPIO.OUT)
+while(True):
+	
+		response=urllib2.urlopen('https://homeautomationiot.000webhostapp.com/bulb1.php')
+		status= response.read()
+	
+		if status=='ON':
+			GPIO.output(7 , True)
+		elif status=='OFF':
+			GPIO.output(7 , False)
