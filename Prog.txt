@@ -6,10 +6,27 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(7,GPIO.OUT)
 while(True):
 	
-		response=urllib2.urlopen('https://homeautomationiot.000webhostapp.com/bulb1.php')
-		status= response.read()
-	
-		if status=='ON':
+		response1=urllib2.urlopen('https://homeautomationiot.000webhostapp.com/bulb1.php')
+		response2=urllib2.urlopen('https://homeautomationiot.000webhostapp.com/bulb2.php')
+		response3=urllib2.urlopen('https://homeautomationiot.000webhostapp.com/bulb3.php')
+		response4=urllib2.urlopen('https://homeautomationiot.000webhostapp.com/bulb4.php')
+		status1= response1.read()
+		status2= response2.read()
+		status3= response3.read()
+		status4= response4.read()
+		if status1=='ON':
 			GPIO.output(7 , True)
-		elif status=='OFF':
+		if status1=='OFF':
 			GPIO.output(7 , False)
+		if status2=='ON':
+			GPIO.output(11 , True)
+		if status2=='OFF':
+			GPIO.output(11 , False)
+		if status3=='ON':
+			GPIO.output(13 , True)
+		if status3=='OFF':
+			GPIO.output(13 , False)
+		if status4=='ON':
+			GPIO.output(15 , True)
+		if status4=='OFF':
+			GPIO.output(715 , False)
