@@ -9,7 +9,7 @@ while(True):
 		response1=urllib2.urlopen('https://homeautomationiot.000webhostapp.com/bulb1.php')
 		response2=urllib2.urlopen('https://homeautomationiot.000webhostapp.com/bulb2.php')
 		response3=urllib2.urlopen('https://homeautomationiot.000webhostapp.com/bulb3.php')
-		response4=urllib2.urlopen('https://homeautomationiot.000webhostapp.com/bulb4.php')
+		response4=urllib2.urlopen('https://homeautomationiot.000webhostapp.com/fan.php')
 		status1= response1.read()
 		status2= response2.read()
 		status3= response3.read()
